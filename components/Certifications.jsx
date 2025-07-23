@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { GraduationCap, Award, FileText, Download, Eye, X } from "lucide-react";
+import Image from "next/image";
 
 export default function Certifications() {
   const [selectedDocument, setSelectedDocument] = useState(null);
@@ -78,13 +79,15 @@ export default function Certifications() {
                 className="bg-gray-700 rounded-2xl shadow-xl border border-white/10 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 <div className="relative h-48 bg-gray-600 overflow-hidden">
-                  <img
+                  <Image
                     src={doc.imageUrl || "/placeholder.svg"}
-                    alt={doc.title}
+                    alt={doc.title || "Certification Image"}
+                    width={800}
+                    height={600}
                     className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
                     onClick={() => setSelectedDocument(doc)}
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0  bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                     <button
                       onClick={() => setSelectedDocument(doc)}
                       className="bg-orange-500 p-3 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300"
@@ -173,9 +176,11 @@ export default function Certifications() {
                 </div>
               </div>
               <div className="p-6 max-h-[70vh] overflow-auto">
-                <img
+                <Image
                   src={selectedDocument.imageUrl || "/placeholder.svg"}
                   alt={selectedDocument.title}
+                  width={800}
+                  height={600}
                   className="w-full h-auto rounded-lg"
                 />
               </div>
