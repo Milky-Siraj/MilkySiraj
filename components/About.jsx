@@ -65,7 +65,7 @@ export default function About() {
                     <Smartphone size={24} className="text-white" />
                   </div>
                   <h4 className="font-semibold text-white mb-2">Mobile</h4>
-                  <p className="text-gray-400 text-sm">Flutter, React Native</p>
+                  <p className="text-gray-400 text-sm">Flutter</p>
                 </div>
               </div>
             </div>

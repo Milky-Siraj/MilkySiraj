@@ -29,12 +29,12 @@ export default function Skills() {
     {
       title: "Mobile",
       icon: Smartphone,
-      skills: ["Flutter", "Dart", "React Native", "Mobile UI/UX"],
+      skills: ["Flutter", "Dart"],
     },
     {
       title: "Tools & DevOps",
       icon: GitBranch,
-      skills: ["Git", "GitHub", "Vercel", "Cloudinary", "Docker", "CI/CD"],
+      skills: ["Git", "GitHub", "Vercel", "Cloudinary"],
     },
   ];
 
@@ -82,7 +82,7 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <div
                       key={skillIndex}
-                      className="bg-orange-500/10 text-orange-500 px-4 py-2 rounded-lg text-sm font-medium border border-orange-500/20"
+                      className="bg-orange-500/10 text-gray-200 px-4 py-2 rounded-lg text-sm font-medium border border-orange-500/20"
                     >
                       {skill}
                     </div>

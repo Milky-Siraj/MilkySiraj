@@ -1,18 +1,26 @@
 import { Calendar, MapPin, ExternalLink, Briefcase } from "lucide-react";
+import Link from "next/link";
 
 export default function Experience() {
   const experiences = [
     {
-      title: "Backend Developer",
+      title: "Full-Stack Developer",
       company: "Happy Events – Event Management Platform",
       location: "Remote",
       period: "December 2024 - Present",
-      technologies: ["Django REST", "Flutter", "Next.js", "PostgreSQL"],
-      achievements: [
-        "Designed system architecture and robust backend APIs with JWT authentication",
-        "Built an intuitive admin dashboard and integrated OpenAI/Gemini APIs for assistance features",
-        "Enabled structured health tracking for parents, reducing manual tracking burden by 60%",
+      technologies: [
+        "React (Next.js)",
+        "Next.js API Routes",
+        "MongoDB",
+        "Cloudinary",
+        "Tailwind CSS",
       ],
+      achievements: [
+        "Developed a full-stack event management and service marketplace platform allowing users to browse, book, and manage event services, and providers to list their offerings.",
+        "Designed the database schema, built RESTful API endpoints, and developed responsive user interfaces.",
+        "Enabled efficient service listing for providers, including rates, images, and categories, and implemented dynamic filtering and responsive layouts for enhanced user experience.",
+      ],
+      liveDemo: "https://events-project-livid.vercel.app",
     },
     {
       title: "Intern – Full-Stack Developer",
@@ -21,11 +29,12 @@ export default function Experience() {
       period: "July 2024 - Oct 2024",
       technologies: ["React", "Next.js", "TailwindCSS", "Node.js", "MongoDB"],
       achievements: [
-        "Built RESTful APIs and responsive user interfaces using Next.js and TailwindCSS",
-        "Improved dynamic filtering for service listings, enabling enhanced user experience",
-        "Practiced clean Git workflows and collaborative code reviews within an agile team",
+        "Developed a comprehensive progress management web application enabling users to create and manage projects/tasks, assign tasks, track completion streaks, and manage bug reports.",
+        "Led both frontend and backend development, utilizing React, Next.js, TailwindCSS for the frontend, and Next.js API Routes (Node.js) with MongoDB for the backend.",
+        "Implemented NextAuth.js for robust authentication and a custom polling-based notification system, enhancing user engagement and accountability.",
+        "Successfully deployed the application on Vercel, improving task tracking efficiency and accountability within team collaborations.",
       ],
-      liveDemo: true,
+      liveDemo: "https://progress-web-app-sand.vercel.app",
     },
   ];
 
@@ -60,9 +69,14 @@ export default function Experience() {
                     </h3>
                     <div className="flex items-center gap-2 text-orange-500 font-medium mb-2">
                       <span>{exp.company}</span>
-                      {exp.liveDemo && (
+
+                      <Link
+                        href={exp.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <ExternalLink size={16} className="text-gray-400" />
-                      )}
+                      </Link>
                     </div>
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
@@ -74,6 +88,19 @@ export default function Experience() {
                         <span>{exp.location}</span>
                       </div>
                     </div>
+                    {exp.liveDemo && (
+                      <div className="mt-4">
+                        <a
+                          href={exp.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center gap-2 text-sm"
+                        >
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

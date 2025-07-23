@@ -117,10 +117,7 @@ export default function Hero() {
               <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
               <span>API Development</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-              <span>Database Design</span>
-            </div>
+
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
               <span>UI/UX Implementation</span>

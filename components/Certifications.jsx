@@ -131,14 +131,6 @@ export default function Certifications() {
                       <Eye size={16} />
                       View
                     </button>
-                    <a
-                      href={doc.downloadUrl}
-                      className="border-2 border-orange-500 text-white font-semibold px-4 py-2 rounded-lg hover:bg-orange-500 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 text-sm flex-1 justify-center"
-                      download
-                    >
-                      <Download size={16} />
-                      Download
-                    </a>
                   </div>
                 </div>
               </div>
@@ -159,14 +151,6 @@ export default function Certifications() {
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
-                  <a
-                    href={selectedDocument.downloadUrl}
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 text-sm"
-                    download
-                  >
-                    <Download size={16} />
-                    Download
-                  </a>
                   <button
                     onClick={() => setSelectedDocument(null)}
                     className="p-2 hover:bg-gray-700 rounded-lg transition-colors duration-200"
